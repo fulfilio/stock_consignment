@@ -28,6 +28,7 @@ class Location:
     def _parent_domain(cls):
         domain = super(Location, cls)._parent_domain()
         domain['supplier'].append('storage')
+        domain['supplier'].append('view')
         domain['storage'].append('customer')
         return domain
 
